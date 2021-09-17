@@ -75,7 +75,6 @@ const GameBoard = (() => {
     return {
         board,
         displayGame,
-        addBoardEvent,
         resetGame,
     };
 })();
