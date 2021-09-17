@@ -1,4 +1,84 @@
 body {
     margin: 0;
     padding: 0;
+    /* display:none; */
+}
+
+.gameContainer {
+    position:relative;
+    text-align: center;
+}
+.grid {
+    margin: 100px auto;
+    display: grid;
+    grid-gap: 1px;
+    width: 550px;
+    height: 550px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1rem;
+}
+
+.cell {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: auto;
+}
+
+.x::before {
+    content:"\03a7";
+}
+
+.o::before {
+    content:"\039f";
+}
+
+.x::before, .o::before {
+    font-family: 'Font Awesome 5 Free';
+    font-size: 8rem;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+}
+
+#overlay {
+    display: block;
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    height: 100;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color:black;
+    z-index: 10;
+}
+
+#startScreen {
+    border-radius: 5px;
+    display: block;
+    padding: 40px;
+    background-color: white;
+    margin: 200px auto;
+    width: 550px;
+    height: auto;
+    z-index: 11;
+}
+
+#endScreen {
+    border-radius: 5px;
+    display: none;
+    padding: 40px;
+    background-color: white;
+    margin: 200px auto;
+    width: 550px;
+    height: auto;
+    z-index: 11;
 }
