@@ -58,12 +58,6 @@ const GameBoard = (() => {
         })
     }
     
-
-    // add event listeners to each cell
-    function addBoardEvent() {
-        
-    }
-    
     function resetGame() {
         this.board = [];
         for (let i = 0; i < 9; i++) {
